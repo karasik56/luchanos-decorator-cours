@@ -28,7 +28,7 @@ def simple_decorator(some_string):
     def inner(func):
         def wrapper(*args, **kwargs):
             print(f'Покупайте наших котиков {some_string}')
-            res = func()
+            res = func(*args, **kwargs)
             return res
         return wrapper
     return inner

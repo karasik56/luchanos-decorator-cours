@@ -18,7 +18,6 @@ def simple_decorator(**number_of_attempts):
                     print(f'Попытка №{count}')
                     count -= 1
             raise ZeroDivisionError("Завершение работы с исключением ZeroDivisionError")
-
         return wrapper
     return inner
 
