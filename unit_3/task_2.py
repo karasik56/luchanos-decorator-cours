@@ -15,9 +15,10 @@ def simple_decorator(**number_of_attempts):
                 try:
                     return func(*args, **kwargs)
                 except ZeroDivisionError as error:
-                    print(f'Ошибка :{error}.Попытка №{count}')
+                    print(f'Попытка №{count}')
                     count -= 1
-            return 'Завершение работы декоратора'
+            raise ZeroDivisionError("Завершение работы с исключением ZeroDivisionError")
+
         return wrapper
     return inner
 
