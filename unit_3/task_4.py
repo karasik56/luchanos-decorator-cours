@@ -14,9 +14,7 @@ def simple_decorator(path):
             log_data = f"{func.__name__} {time.time() - start}"
             log_writer(log_data, path)
             return res
-
         return wrapper
-
     return inner
 
 
