@@ -5,41 +5,41 @@
 4. Осуществите вызов функции суммирования из полученной переменной."""
 
 """1"""
-count_multy = 0
-count_div = 0
-count_sub = 0
-
-
-def medium_unit2_multy(a, b):
-    global count_multy
-    count_multy += 1
-    return a * b
-
-
-def medium_unit2_div(a, b):
-    global count_div
-    count_div += 1
-    return a / b
-
-
-def medium_unit2_sub(a, b):
-    global count_sub
-    count_sub += 1
-    return a - b
+# count_multy = 0
+# count_div = 0
+# count_sub = 0
+#
+#
+# def medium_unit2_multy(a, b):
+#     global count_multy
+#     count_multy += 1
+#     return a * b
+#
+#
+# def medium_unit2_div(a, b):
+#     global count_div
+#     count_div += 1
+#     return a / b
+#
+#
+# def medium_unit2_sub(a, b):
+#     global count_sub
+#     count_sub += 1
+#     return a - b
 
 
 """2"""
 
 
-def outer_func(x, y):
+def outer_func():
     def sum_func(a, b):
         return a + b
-    return sum_func(x, y)
+    return sum_func
 
 
 """3"""
-var = outer_func(1, 2)
-print(var)  # Выводим результат работы функции суммирования
+var = outer_func()
+print(var)  # Выводим название функции и адрес в памяти. function outer_func.<locals>.sum_func at адрес в памяти
 
 """4"""
-
+print(var(5, 2))  # Выводим результат суммирования
