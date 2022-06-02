@@ -26,3 +26,20 @@ def medium_unit2_sub(a, b):
     global count_sub
     count_sub += 1
     return a - b
+
+
+"""2"""
+
+
+def outer_func(x, y):
+    def sum_func(a, b):
+        return a + b
+    return sum_func(x, y)
+
+
+"""3"""
+var = outer_func(1, 2)
+print(var)  # Выводим результат работы функции суммирования
+
+"""4"""
+
